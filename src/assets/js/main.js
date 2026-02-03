@@ -11,6 +11,19 @@
     });
 
 
+    $(".jsHref").on('click', function (e) {
+        e.preventDefault(); 
+        const tel = $(this).data("tel"); // 取 data-ref
+        if (tel) {
+            window.location = tel;
+        }
+
+        const href = $(this).data('href');
+        if (href) {
+            window.location = href;
+        }
+    })
+
 /* 2. sticky And Scroll UP */
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
