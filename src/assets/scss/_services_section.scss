@@ -1,14 +1,19 @@
-.our-services-area{
+.our-services-area {
     padding-bottom: 330px;
-   
-    .single-services1{
-       
-        .services-ion{
+
+    .single-services1 {
+
+        .services-ion {
             margin-bottom: 19px;
+
+            img {
+                width: 80px;
+            }
         }
-        .services-cap{
-            h5{
-                a{
+
+        .services-cap {
+            h5 {
+                a {
                     color: #fff;
                     font-family: $font_2;
                     font-size: 24px;
@@ -16,40 +21,46 @@
                     margin-bottom: 12px;
                     font-weight: 600;
                     display: block;
-                    @media #{$sm}{
+
+                    @media #{$sm} {
                         font-size: 20px;
                     }
                 }
-                a:hover{
-                    color: #fff;
-                }
+
+                    a:hover {
+                        color: #fff;
+                    }
             }
-            p{
+
+            p {
                 margin-bottom: 24px;
                 font-size: 18px;
                 font-weight: 300;
                 color: #fff;
-                @media #{$lg}{
+
+                @media #{$lg} {
                     font-size: 16px;
                 }
             }
-            a.more-btn{
+
+            a.more-btn {
                 color: $theme-color;
                 font-size: 18px;
                 font-weight: 400;
-                &:hover{
+
+                &:hover {
                     letter-spacing: 1px;
                 }
             }
-    
         }
     }
 }
 
 // Gallery
 .gallery-area {
-	margin-top: -295px;
-    &.gallery-area2{
+    margin-top: -295px;
+
+    &.gallery-area2 {
         margin: 0;
     }
 }

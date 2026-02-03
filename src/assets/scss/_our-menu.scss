@@ -1,67 +1,86 @@
-.our-menu{
+.our-menu {
     position: relative;
     // Pricing items
-    .menu-items{
+    .menu-items {
         margin-bottom: 25px;
-        .menu-left{
+
+        .menu-left {
             margin-bottom: 6px;
-            .menu-tittle{
-                
-                h4{
+
+            .menu-tittle {
+
+                h4 {
                     font-family: $font_2;
                     color: #636363;
                     @include transition(.4s);
+                    align-items: baseline;
+                    gap: 12px;
+                    margin: 0;
                     font-size: 17px;
                     margin-bottom: 1px;
                     font-weight: 700;
-                    display: inline-block;
+                    display: flex;
                     line-height: 1.6;
-                    @media #{$xs}{
+
+                    @media #{$xs} {
                         font-size: 16px;
                     }
-                    &:hover{
-                        color:heading-color
+
+                    &:hover {
+                        color: heading-color
                     }
-                    span{
-                
+
+                    p {
+                        margin-left: auto; /* 关键：把价格推到最右 */
+                        white-space: nowrap; /* 防止价格换行 */
+                        text-align: right;
+                    }
+
+                    span {
                         color: $theme-color;
                         margin-bottom: 0;
                         font-size: 18px;
                         font-weight: 700;
-                        display: inline-block;
+                        margin-left: auto; /* 关键：把价格推到最右 */
+                        white-space: nowrap; /* 防止价格换行 */
+                        text-align: right;
                     }
                 }
             }
-            
         }
-        .menu{
-            p{
+
+        .menu {
+            p {
                 margin-bottom: 0;
                 color: #636363;
                 font-size: 16px;
-                 font-weight: 300;
+                font-weight: 300;
             }
-            
         }
     }
     // Menu Shape
-    .menu-shape{
+    .menu-shape {
         position: absolute;
         left: 320px;
         top: 44px;
-        @media #{$large1}{
+
+        @media #{$large1} {
             left: 20px;
         }
-        @media #{$large2}{
+
+        @media #{$large2} {
             left: 20px;
         }
-        @media #{$large3}{
+
+        @media #{$large3} {
             left: 260px;
         }
-        @media #{$lg}{
+
+        @media #{$lg} {
             left: 20px;
         }
-        @media #{$md}{
+
+        @media #{$md} {
             left: 20px;
         }
     }
