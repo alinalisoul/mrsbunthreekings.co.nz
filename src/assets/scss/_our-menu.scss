@@ -94,3 +94,110 @@
         padding-left: 0px;
     }
 }
+
+.small-tittle {
+    margin-top: 28px;
+}
+
+    .small-tittle h4 {
+        margin: 0 0 10px;
+    }
+
+/* 菜单行：底部分隔 + 留白 */
+.menu-items {
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(0,0,0,.18);
+}
+
+    .menu-items:last-child {
+        border-bottom: 0;
+    }
+
+/* 关键：h4 内部做 flex，把价格推到右边 */
+.menu-tittle h4 {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    line-height: 1.35;
+}
+
+    /* 价格（或右侧信息）不换行 */
+    .menu-tittle h4 span {
+        white-space: nowrap;
+        font-weight: 700;
+        opacity: .9;
+    }
+
+/* 标签（🌶️🌱GF）更像徽章 */
+.menu-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    opacity: .9;
+}
+
+/* 分组说明（例如：Buns 的统一价格） */
+.menu-note {
+    margin: -6px 0 10px;
+    font-size: 0.95rem;
+    opacity: .75;
+}
+
+/* 小屏：给价格一点呼吸空间 */
+@media (max-width: 576px) {
+    .menu-tittle h4 {
+        flex-wrap: wrap;
+    }
+
+        .menu-tittle h4 span {
+            margin-left: auto;
+        }
+}
+
+/* 更明显的“价格条” */
+.menu-pricing {
+    margin: 6px 0 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+    /* 左侧小标签 */
+    .menu-pricing .label {
+        font-size: .92rem;
+        opacity: .75;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    /* 价格部分更突出 */
+    .menu-pricing .value {
+        font-size: 1.02rem;
+        font-weight: 900;
+        color: #d35a2b; /* 建议用你按钮 btn_1 的主色，保持统一 */
+        white-space: nowrap;
+    }
+
+        .menu-pricing .value .unit {
+            font-weight: 700;
+            color: rgba(0,0,0,.65);
+        }
+
+/* 小屏：允许换行但保持漂亮 */
+@media (max-width: 576px) {
+    .menu-pricing {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+        .menu-pricing .value {
+            width: 100%;
+        }
+}
