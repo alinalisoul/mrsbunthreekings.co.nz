@@ -24,6 +24,25 @@
         }
     })
 
+    $('a[href^="#"]').on('click', function (e) {
+      var targetSelector = $(this).attr('href');
+
+      if (!targetSelector || targetSelector === '#' || !$(targetSelector).length) {
+        return;
+      }
+
+      e.preventDefault();
+
+      var headerOffset = $('.header-area').outerHeight() || 0;
+      var targetTop = $(targetSelector).offset().top - headerOffset - 16;
+
+      $('body,html').animate({
+        scrollTop: Math.max(targetTop, 0)
+      }, 800);
+
+      $('.menu-body').removeClass('menu-open');
+    });
+
 /* 2. sticky And Scroll UP */
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
