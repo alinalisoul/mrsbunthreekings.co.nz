@@ -10,20 +10,6 @@
       });
     });
 
-
-    $(".jsHref").on('click', function (e) {
-        e.preventDefault(); 
-        const tel = $(this).data("tel"); // 取 data-ref
-        if (tel) {
-            window.location = tel;
-        }
-
-        const href = $(this).data('href');
-        if (href) {
-            window.location = href;
-        }
-    })
-
     $('a[href^="#"]').on('click', function (e) {
       var targetSelector = $(this).attr('href');
 
